@@ -51,7 +51,7 @@ function MyApp() {
     })
     .then((response) => {
       if (response.ok) {
-        const updated = characters.filter((character) => character.id !== id);
+        const updated = characters.filter((character) => character._id !== id);
         setCharacters(updated);
       } else {
         console.error("Couldn't delete user")
